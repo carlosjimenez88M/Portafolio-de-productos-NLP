@@ -28,5 +28,6 @@ Resumenes y partes importantes de los documentos :
 
 EN la fase de Machine Learning se desarrollo un algoritmo que puede identificar a que tipo de texto pertenece un párrafo para así poder compararlo entre paises y temas.
 
+* Código (https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Machine-Learning-.md)
 
 

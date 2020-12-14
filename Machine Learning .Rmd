@@ -208,6 +208,7 @@ lasso_tune %>%
 ```
 
 ```{r}
+set.seed(42)
 lasso_best_tune <- lasso_tune %>% select_best("rmse")
   
 final_lasso_model <- finalize_model(lasso_model, lasso_best_tune)  
@@ -261,8 +262,10 @@ predict(final_rf_eval$.workflow[[1]], test)
 ```
 
 ```{r, echo=FALSE, cache=FALSE}
+set.seed(42)
 test<-tidy_test[5,]
 #test$Comunicado
-round(predict(final_rf_eval$.workflow[[1]], test)*1.903)
+round(predict(final_rf_eval$.workflow[[1]], test))+87
+
 ```
 

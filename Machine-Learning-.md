@@ -171,6 +171,7 @@ lasso_tune %>%
 ![](Machine-Learning-_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
+set.seed(42)
 lasso_best_tune <- lasso_tune %>% select_best("rmse")
   
 final_lasso_model <- finalize_model(lasso_model, lasso_best_tune)  
@@ -211,8 +212,8 @@ random_forest_tune %>%
     ## # A tibble: 2 x 6
     ##   .metric .estimator    mean     n std_err .config             
     ##   <chr>   <chr>        <dbl> <int>   <dbl> <chr>               
-    ## 1 rmse    standard   302.       10 15.6    Preprocessor1_Model1
-    ## 2 rsq     standard     0.440    10  0.0761 Preprocessor1_Model1
+    ## 1 rmse    standard   302.       10 16.2    Preprocessor1_Model1
+    ## 2 rsq     standard     0.423    10  0.0794 Preprocessor1_Model1
 
 ``` r
 final_rf_wf <- workflow() %>% 
@@ -242,4 +243,4 @@ predict(final_rf_eval$.workflow[[1]], test)
 ```
 
     ##   .pred
-    ## 1  1031
+    ## 1   622
