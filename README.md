@@ -19,7 +19,7 @@ Links de los entregables:
 
 Resumenes y partes importantes de los documentos :
 
-*PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
+* PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
 
 * Código ()
 
