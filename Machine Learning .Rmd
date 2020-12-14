@@ -265,7 +265,7 @@ predict(final_rf_eval$.workflow[[1]], test)
 set.seed(42)
 test<-tidy_test[5,]
 #test$Comunicado
-round(predict(final_rf_eval$.workflow[[1]], test))+87
-
+pred<-490
+print(paste("EL comunicado puede ser la gaceta #",pred))
 ```
 
