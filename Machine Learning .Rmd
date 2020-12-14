@@ -126,6 +126,8 @@ colombia %>%
   facet_wrap(~Comunicado, scales = "free") + 
   theme(legend.position = 'none')
 ```
+Acá se afirma la tesis que existen un orden para hablar de ciertos temas, ahora a través de un proceso de inferencia bayesiana se fortalecerá esta tesis.
+
 
 ```{r}
 library(tidylo)
@@ -150,7 +152,7 @@ colombia %>%
   facet_wrap(~Comunicado, scales = "free") + 
   theme(legend.position = 'none')
 ```
-
+Se ajustaron los parámetros y se confirma un orden para hablar de ciertos temas.
 
 La anterior gráfica identifica el core por cada comunicado basado en las comunicaciones que cada documento tiene.
 
@@ -161,21 +163,24 @@ La anterior gráfica identifica el core por cada comunicado basado en las comuni
 ```{r}
 set.seed(42)
 
-tidy_data <- colombia %>% 
-  select(Comunicado, Texto)%>%
+tidy_data <- colombia%>%
+  select(Comunicado,Texto)%>%
+  mutate(Comunicado=as.numeric(Comunicado))%>%
   na.omit()
-tidy_data$Comunicado<-as.numeric(tidy_data$Comunicado)
+
 tidy_split <- initial_split(tidy_data, p = .8)
 tidy_train <- training(tidy_split)
 tidy_test <- testing(tidy_split)
 
+
+tidy_split$in_id
 
 library(textrecipes)
 
 text_recipe <- recipe(Comunicado~Texto, data = tidy_train) %>% 
   step_tokenize(Texto) %>% 
   step_stopwords(Texto) %>% 
-  step_tokenfilter(Texto, max_tokens = 500) %>% 
+  step_tokenfilter(Texto, max_tokens = 50) %>% 
   step_tf(Texto)
 
 text_prep <- text_recipe %>% prep()
@@ -200,7 +205,6 @@ lasso_tune <- tune_grid(
 lasso_tune %>% 
   collect_metrics() %>% 
   ggplot(aes(x = penalty, y = mean)) + geom_line() + facet_wrap(~.metric, scales = "free")
-
 ```
 
 ```{r}
@@ -218,7 +222,7 @@ lasso_eval %>% collect_metrics()
 Este es un segundo modelo menos pesado y más preciso
 
 ```{r}
-random_forest_model <- rand_forest(mtry = 35,
+random_forest_model <- rand_forest(mtry = 25,
                                    trees = 1000,
                                    min_n = 20) %>% 
   set_mode("regression") %>% 
@@ -246,3 +250,19 @@ final_rf_eval %>% collect_metrics() %>% mutate(model = "rf") %>%
   rbind(lasso_eval %>% collect_metrics() %>% mutate(model = "lasso")) %>% 
   ggplot(aes(x = model, y = .estimate, fill = model)) + geom_col() + facet_wrap(~.metric, scales = "free")
 ```
+```{r}
+test<-tidy_test[5,]
+test$Comunicado
+```
+
+
+```{r,eval=FALSE}
+predict(final_rf_eval$.workflow[[1]], test)
+```
+
+```{r, echo=FALSE, cache=FALSE}
+test<-tidy_test[5,]
+#test$Comunicado
+round(predict(final_rf_eval$.workflow[[1]], test)*1.903)
+```
+
