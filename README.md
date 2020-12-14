@@ -11,7 +11,6 @@ En el presente respositorio encontraras una serie de productos desarrollados par
 
 La inteligencia artificial que lleva tu nombre **G** desarrolla lo siguiente (se deja ejemplo para su respectivo análisis):
 
-
 1. Analiza ¿cuáles son las partes más importantes del documento? Esto quiere decir su razon de ser.
 2. Genera resumenes basados desde la aparición del BID y la razón del documento.
 3. Se hace una predicción de lo que se hablaría si el mismo continuara (esto nace de una conversación con Leopoldo)
