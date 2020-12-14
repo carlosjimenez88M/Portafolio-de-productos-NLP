@@ -19,6 +19,7 @@ Links de los entregables:
 
 Resumenes y partes importantes de los documentos :
 i) PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
+ii) Código ()
 
 ### Fase Machine Learning
 
