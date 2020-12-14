@@ -16,6 +16,14 @@ La inteligencia artificial que lleva tu nombre **G** desarrolla lo siguiente (se
 2. Genera resumenes basados desde la aparición del BID y la razón del documento.
 3. Se hace una predicción de lo que se hablaría si el mismo continuara (esto nace de una conversación con Leopoldo)
 
+Links de los entregables:
+
+Resumenes y partes importantes de los documentos :
+i) PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
+
 ### Fase Machine Learning
+
+EN la fase de Machine Learning se desarrollo un algoritmo que puede identificar a que tipo de texto pertenece un párrafo para así poder compararlo entre paises y temas.
+
 
 
