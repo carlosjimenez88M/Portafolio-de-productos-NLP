@@ -21,7 +21,8 @@ Resumenes y partes importantes de los documentos :
 
 * PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
 
-* Código ()
+* Código (https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Deep_Learning.md) -> Acá se ve más claro!!
+
 
 ### Fase Machine Learning
 
