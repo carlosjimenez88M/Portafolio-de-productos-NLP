@@ -242,5 +242,4 @@ test$Comunicado
 predict(final_rf_eval$.workflow[[1]], test)
 ```
 
-    ##   .pred
-    ## 1   622
+    ## [1] "Hola Soy G! Y creo que este texto pertenece a la gaceta # 490"
