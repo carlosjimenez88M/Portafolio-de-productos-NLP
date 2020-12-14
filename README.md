@@ -18,8 +18,10 @@ La inteligencia artificial que lleva tu nombre **G** desarrolla lo siguiente (se
 Links de los entregables:
 
 Resumenes y partes importantes de los documentos :
-i) PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
-ii) Código ()
+
+*PDF(https://github.com/carlosjimenez88M/Portafolio-de-productos-NLP/blob/master/Productos%20NLP/Deep_learning_output.pdf)
+
+* Código ()
 
 ### Fase Machine Learning
 
