@@ -5,6 +5,8 @@ Mi estimada G!
 En el presente respositorio encontraras una serie de productos desarrollados para el trabajo de las gacetas, dichos productos se dividen de la siguiente manera (los códigos estan abiertos, pero legalmente su autoria y único dueño son ustedes):
 
 
+
+
 ### Fase Deep Learning
 
 La inteligencia artificial que lleva tu nombre **G** desarrolla lo siguiente (se deja ejemplo para su respectivo análisis):
